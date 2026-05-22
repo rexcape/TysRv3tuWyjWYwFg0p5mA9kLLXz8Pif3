@@ -1,0 +1,40 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "7z7y0bxgzbn5sggghoba5cq43bgftj49",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-05-13",
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true,
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1,
+    },
+  },
+  "upload_source_maps": true,
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "kv_namespaces": [{ "binding": "KV", "id": "91362bc263bc403f813d11d60ac8d98b" }],
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 5, "period": 60 },
+    },
+  ],
+  "secrets": {
+    "required": ["VTBAZRWHXKMS", "CTZGBKRYUVWR", "VBZPFGJFABWH", "AGYEVXNETDAQ", "QPQMZTWCMWTP", "HVFMXDVHJJDP", "FZCVURPKQYBA"],
+  },
+}
